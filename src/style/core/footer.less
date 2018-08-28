@@ -1,0 +1,31 @@
+.footer {
+  line-height: 150px;
+  color: @font-999;
+  text-align: center;
+  padding: 0 30px;
+  p {
+    line-height: 150px;
+    font-size: 26px;
+    &.line {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 1Px;
+        width: 230px;
+        background-color: #d8d8d8;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        height: 1Px;
+        width: 230px;
+        background-color: #d8d8d8;
+      }
+    }
+  }
+}

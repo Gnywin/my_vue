@@ -1,0 +1,183 @@
+@import url('../../style/core/variables.less');
+@import url('../../style/core/mixins.less');
+.main{
+	background-color: rgb(238,238,238);
+	padding-bottom: 120px;
+}
+
+.bg-white{
+	background-color: #fff;
+	margin-bottom: 18px;
+	
+}
+.pro-detail{
+	padding: 36px 30px;
+	.pro-img{
+		width:130px;
+		height:130px;
+		margin-right: 20px;
+		img{
+			width:100%;
+			height:100%;
+		}
+	}
+	.pro-name{
+		color:#333;
+		font-size: 32px;
+		font-weight: normal;
+		line-height: 1;
+		.pro-apply{
+			float: right;
+			font-size: 28px;
+			color:#aaa;
+			margin-top: 2px;
+		}
+	}
+	.tag-group{
+		margin-top:14px;
+		height: auto;
+    overflow: hidden;
+		span{
+			float: left;
+			font-size: 24px;
+			line-height: 28px;
+			padding:1Px 10px;
+			color:@color-s1-orange;
+			border: 1Px solid @color-s1-orange;
+			
+			border-radius: 12Px;
+			margin-right: 3Px;
+		}
+	}
+	.pro-adv{
+		clear: both;
+		font-size: 28px;
+		color:#999;
+		margin-top: 16px;
+	}
+
+	.card-group{
+		margin-top: 20px;
+		padding-top: 30px;
+		border-top: 1Px solid #ededed;
+		.card{
+			// text-align: center;
+			&.flex-3{
+				flex:31;
+			}
+			&.flex-2{
+				flex:24;
+			}
+			&.flex-1{
+				flex:14;
+			}
+			&.border{
+				border-right: 1Px solid #ededed;
+			}
+		}
+		.card-title{
+			color:#666;
+			font-size: 24px;
+		}
+		.spec-font{
+			margin-top:20px;
+			color:@color-s1-orange;
+			font-size: 0;
+		}
+		.card-num{
+			margin-top:20px;
+			color:@color-s1-orange;
+			font-size: 40px;
+		}
+		.card-unit{
+			font-size: 24px;
+		}
+	}
+}
+
+.ico{
+	display: inline-block;
+	width:26px;
+	height: 26px;
+	background-size: 100% 100%;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+// .ico-info {
+//   background-image: url(../img/ico_info.png);
+// }
+
+// .ico-menu {
+//   background-image: url(../img/ico_menu.png);
+// }
+
+// .ico-menu2 {
+	
+//   background-image: url(../img/ico_menu2.png);
+// }
+.apply-group{
+	padding: 30px 30px 26px 30px;
+	.sub-title{
+		color:#333;
+		font-size: 32px;
+		line-height: 1;
+		font-weight: normal;
+		padding-bottom: 28px;
+		border-bottom: 1Px solid #ededed;
+	}
+	.apply-desc{
+		font-size: 28px;
+		line-height: 48px;
+		color:#999;
+		padding-top: 20px;
+		// padding-left: 0.5rem;
+	}
+	.apply-img{
+		width:100%;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		// padding-left: 0.5rem;
+		box-sizing: border-box;
+		img{
+			pointer-events: none; 
+			width:100%;
+		}
+	}
+}
+
+.btn{
+	position: fixed;
+	width:100%;
+	max-width: 750px;
+	bottom: 0;
+	height: 110px;
+	line-height: 110px;
+	text-align: center;
+	font-size: 40px;
+	color:#fff;
+	background-color:@color-s1-orange;
+}
+
+.tips-info{
+	// position: relative;
+	height: 53px;
+	// line-height: 0.8rem;
+	background-color: rgb(255,224,190);
+	text-align: center;
+	font-size: 0;
+	padding-top: 27px;
+	// .rem(26);
+	// color:@font-color;
+	span{
+		line-height: 1;
+		font-size: 26px;
+		color:@font-color;
+	}
+}
+.ico-info{
+	// position: absolute;
+	background-image: url(https://www.yoyoqianbao.com/static/images/ico_info_black.png);
+	margin-right: 10px;
+	vertical-align: bottom;
+}

@@ -1,0 +1,269 @@
+@import url('../../style/core/variables.less');
+@import url('../../style/core/mixins.less');
+
+.yoyo-banner {
+  padding-top: 30px;
+  max-height: 300px; // .swiper-main
+  .swiper-container {
+    // width: 690px;
+    // max-height: 300px;
+    height: 300px; // margin: 0 0.3rem; // box-sizing: border-box;
+    margin: 0 30px;
+    box-shadow: 0 0 20px 0 #c6c2c0; // box-shadow: 0 0 0 0.2rem #c6c2c0;
+    // box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden; // font-size: 0;
+    border: 0; // background-color:#ff0;
+    // margin-right
+    .swiper-slide {
+      border: 0; // width:110% !important;
+      // height: 150px;
+      height: 300px; // width: 100%;
+      // width:calc(~'100% + 1px');
+      border-radius: 8px; // &.swiper-slide-active{
+      //   right: -1px;
+      // }
+      // flex-shrink: 1;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+  }
+}
+
+.content-box {
+  // margin: 0.6rem 0.3rem 0; // padding-bottom: 0.3rem;
+  margin: 40px 30px 0; // padding-bottom: 0.3rem;
+  h1 {
+    font-size: 42px;
+    color: @font-color;
+    padding-bottom: 10px; // font-weight: normal;
+  } // s2 假广告
+  .swiper-adv {
+    height: 40px;
+    overflow: hidden;
+  }
+  .adv-tips {
+    height: auto;
+    overflow: hidden;
+    .adv-img {
+      float: left;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    p {
+      float: left;
+      line-height: 40px;
+      font-size: 28px;
+      color: rgb(170, 170, 170);
+    }
+    .adv-name {
+      display: inline-block;
+      max-width: 200px;
+      .ellipsis();
+      margin-right: 10px;
+    }
+  } // 过滤条件
+  .filter-group {
+    height: auto;
+    overflow: hidden;
+    margin-top: 38px;
+    height: 70px;
+    margin-bottom: 24px;
+    .filter-item {
+      float: left;
+      display: inline-block;
+      margin-right: 10px; // margin-top: 30px;
+      width: 128px;
+      line-height: 54px;
+      height: 54px;
+      color: @font-light;
+      font-size: 26px;
+      background-color: rgb(240, 242, 245);
+      border-radius: 27px;
+      text-decoration: none;
+      text-align: center;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        line-height: 60px;
+        color: rgb(254, 254, 254);
+        margin-top: 0;
+        border-radius: 30px;
+        background-image: linear-gradient(left, #FF8200, #FFB310);
+        background: -webkit-linear-gradient(left,#ff8200,#ffb310);
+        box-shadow: 0px 6px 6px 0px rgba(255, 132, 0, 0.36);
+      }
+    }
+  }
+  .list-item {
+    display: block;
+    color: @font-color;
+    text-decoration: none;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 20px;
+    padding-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 30px;
+    box-sizing: border-box;
+    border-radius: 8px; // border: 1px solid #ddd;
+    // box-shadow: 5px 20px 8px #efd9ca;
+    // box-shadow: 0 0.05rem 0.2rem 0 #efd9ca;
+    // box-shadow: 0.046rem 0.0195rem 0.2rem 0 #fe9970;
+    // box-shadow: 0 0 0.2rem 0 #fe9970;
+    box-shadow: 1.84px 0.78px 20px 0 #cacaca;
+    position: relative;
+    .tag {
+      position: absolute;
+      height: 135px;
+      width: 135px;
+      right: 0;
+      top: 0;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      &.tag-new {
+        background-image: url(https://www.yoyoqianbao.com/static/images/tag_new.png);
+      }
+      &.tag-hot {
+        background-image: url(https://www.yoyoqianbao.com/static/images/tag_hot.png);
+      }
+      &.tag-easy {
+        background-image: url(https://www.yoyoqianbao.com/static/images/tag_easy.png);
+      }
+      &.tag-large {
+        background-image: url(https://www.yoyoqianbao.com/static/images/tag_large.png);
+      }
+      &.tag-small {
+        background-image: url(https://www.yoyoqianbao.com/static/images/tag_small.png);
+      }
+    }
+    .list-body {
+      // padding-top: 0.2rem;
+      display: flex;
+      .pro-img {
+        width: 150px;
+        height: 150px;
+        margin-right: 20px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .pro-title {
+        color: #333333;
+        font-size: 32px; // padding-bottom: 0.02rem;
+        font-weight: normal;
+      }
+      .pro-tag {
+        span {
+          display: inline-block;
+          margin-right: 10px;
+          line-height: 28px; // .rem(22);
+          font-size: 22px;
+          padding: 1Px 10px; // color:@color-s1-orange;
+          // border: 1px solid @color-s1-orange;
+          color: @font-aaa;
+          border: 1Px solid @font-aaa;
+          border-radius: 15px;
+        }
+      }
+      .pro-ratio {
+        float: left;
+        color: @color-s1-blue;
+        font-size: 24px; // font-family: "AiralNarrow";
+      }
+      .pro-limit {
+        float: right;
+        color: @color-s1-orange;
+        font-size: 24px; // font-family:'微软雅黑';
+        .font-lg {
+          &:after {
+            right: -20px;
+            background-image: url(https://www.yoyoqianbao.com/static/images/arrow_up.png);
+          }
+        }
+      }
+      .m-t {
+        // margin-top: 0.04rem;
+        margin-top: 15px;
+        margin-bottom: 9px;
+      }
+      .font-lg {
+        position: relative;
+        font-size: 50px;
+        &:after {
+          position: absolute;
+          content: "";
+          width: 14px;
+          height: 10px;
+          right: -15px; // top: 0.15rem;
+          background: url(https://www.yoyoqianbao.com/static/images/arrow_down.png) no-repeat top right;
+          background-size: 100%;
+        }
+      }
+      .pro-item-title {
+        display: block;
+        color: #969696;
+        font-size: 24px;
+        padding-top: 2px; // font-family:'微软雅黑';
+      }
+      .font-arial {
+        font-family: Arial;
+      }
+    }
+    .list-footer {
+      clear: both;
+      position: relative;
+      margin-top: 10px;
+      line-height: 64px;
+      font-size: 24px;
+      color: @font-aaa; // border-top: 1px solid @color-s1-orange;
+      // background: url(https://www.yoyoqianbao.com/static/images/line.png) no-repeat;
+      // border-color: linear-gradient(#ffa113,#ff5d37);
+      margin: 10px -15px 0 -15px;
+      padding: 0 15px;
+      &:before {
+        content: "";
+        position: absolute;
+        height: 1Px;
+        left: -20px;
+        width: 110%; // background: linear-gradient(#ffa113, #ff5d37);
+        // background-color: #d2d2d2;
+        background-color: #eee; // border-top: 1Px solid #eee;
+        // opacity: .7;
+      }
+    }
+  }
+}
+
+.minirefresh-upwrap.status-nomore .upwrap-tips {
+  padding: 0 !important;
+  line-height: 60px;
+  font-size: 26px;
+  position: relative;
+  width:690px;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 1Px;
+    width: 230px;
+    background-color: #d8d8d8;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 1Px;
+    width: 230px;
+    background-color: #d8d8d8;
+  }
+}
