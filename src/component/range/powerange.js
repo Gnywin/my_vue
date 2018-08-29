@@ -258,7 +258,7 @@ Horizontal.prototype.bindEvents = function () {
   this.touch2.bind('touchstart', 'onmousedown')
   this.touch2.bind('touchmove', 'onmousemove')
   this.touch2.bind('touchend', 'onmouseup')
-  console.log(this)
+  // console.log(this)
   this.mouse2 = mouse(this.handlemax, this)
   this.mouse2.bind()
 }

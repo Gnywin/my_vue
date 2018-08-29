@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+	  <select name="a" id="a">
+	    <option value="0">全部</option>
+	    <option value="1">test1</option>
+	    <option value="2">test2</option>
+	    <option value="3">test3</option>
+	  </select>
+	  <select name="b" id="b">
+	    <option value="0">全部</option>
+	  </select>
+	</div>
+	<script src="http://img3.fdc.com.cn/cms/newindex/new/js/lib/jquery.min.js"></script>
+	<script>
+		var createSelect = function(arr,el){
+			var options = arr.map(function(item){
+				return '<option value="'+item.key+'">'+item.name+'</option>';
+			})
+			$(el).html(options)
+		}
+		$('#a').change(function(){
+			var typeId = this.value;
+			$.ajax({
+				type:"get",
+				url:'https://www.easy-mock.com/mock/5b7cfd62151681528a184c2b/api/select',
+				params:{type:typeId},
+				success:function(res){
+					if(res.status==1){
+						createSelect(res.data,$('#b'))
+					}
+					
+				},
+				error:function(res){
+					console.log(res)
+				}
+			})
+		})
+	</script>
+</body>
+</html>
