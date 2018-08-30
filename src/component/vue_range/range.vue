@@ -21,7 +21,13 @@
 			background-color:#007dd4;
 		}
 		.bar-range-number{
-			padding:0 10px;
+			// padding:0 50px;
+			&.left{
+				padding-right:50px;
+			}
+			&.right{
+				padding-left:50px;
+			}
 		}
 		.bar-range{
 			position:relative;
@@ -63,13 +69,13 @@
 <template>
 	<div class="contanier">
 		<div class="range-bar-wrap" ref="bar">
-			<span class="bar-range-number">{{minNumber}}</span>
+			<span class="bar-range-number left">{{minNumber}}</span>
 			<div class="bar-range" >
 				<div class="bar" :style="{'left':left+'%','width':100-right-left +'%'}"></div>
-				<span class="bar-circle bar-min" ref="min" @touchmove="move($event,'min')" :style="{'left':left+'%'}"></span>
-				<span class="bar-circle bar-max" ref="max" @touchmove="move($event,'max')" :style="{'right':right+'%'}"></span>
+				<span class="bar-circle bar-min" ref="min" @touchmove="move($event,'min')" :style="{'left':(left-dist)+'%'}"></span>
+				<span class="bar-circle bar-max" ref="max" @touchmove="move($event,'max')" :style="{'right':(right-dist)+'%'}"></span>
 			</div>
-			<span class="bar-range-number">{{maxNumber}}</span>
+			<span class="bar-range-number right">{{maxNumber}}</span>
 		</div>
 		<div><span>min:{{min}}</span>   <span>max:{{max}}</span></div>
 	</div>

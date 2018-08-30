@@ -18,7 +18,7 @@
 		</div>
 
 		<div class="contanier">
-			<vueRange :min="0" :max="100"/>
+			<vueRange :min-num="0" :max-num="5000" point-len="0"/>
 		</div>
 		
 	</div>
