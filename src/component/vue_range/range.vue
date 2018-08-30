@@ -23,10 +23,10 @@
 		.bar-range-number{
 			// padding:0 50px;
 			&.left{
-				padding-right:50px;
+				padding-right:40px;
 			}
 			&.right{
-				padding-left:50px;
+				padding-left:40px;
 			}
 		}
 		.bar-range{
